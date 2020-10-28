@@ -1,0 +1,14 @@
+
+body{
+    text-align: center;
+}
+
+.col {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    background-color: blanchedalmond;
+    border-radius: 50%;
+    margin: 6px;
+}
+
