@@ -2,9 +2,11 @@ import {View} from './View.js';
 import {Board} from './Board.js';
 console.log("Controller loaded!");
 
+const NUMBER_ROWS = 6, NUMBER_COLS = 7, NUMBER_CONNECT = 4;
+
 const canvas = document.getElementById('game');
-const view = new View(canvas, 6,7);
-const gameManeger = new Board(6, 7, -1, 4);
+const view = new View(canvas, NUMBER_ROWS, NUMBER_COLS);
+const gameManeger = new Board( NUMBER_ROWS, NUMBER_COLS, -1, NUMBER_CONNECT);
 view.drawEmptyBoard();
 
 
@@ -31,7 +33,7 @@ canvas.addEventListener('click', function(event) {
                 gameManeger.restartAll();
                 view.drawEmptyBoard();
             }
-        }, 1);
+        }, 100);
 
     }
 
