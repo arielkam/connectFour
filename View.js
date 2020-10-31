@@ -55,7 +55,7 @@ export class View{
         x = x - this.RightShift; //handle the tab, start from the begining of canvas
         for(let j = 0; j < this.canvas.width; j += this.cellWidth){
             if(x > j && x < j + this.cellWidth){
-                return (j / this.cellWidth);
+                return Math.round(j / this.cellWidth);
             }
         }
         return -1;
